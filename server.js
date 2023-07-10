@@ -2,6 +2,10 @@ const express = require("express");
 const lodash = require("lodash");
 const app = express();
 const quotes = require("./quotes.json");
+const cors = require("cors");
+
+
+app.use(cors());
 
 app.get("/", function (request, response) {
   response.send(
