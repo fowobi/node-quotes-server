@@ -3,6 +3,7 @@ const lodash = require("lodash");
 const app = express();
 const quotes = require("./quotes.json");
 const cors = require("cors");
+const port = 45479;
 
 
 app.use(cors());
