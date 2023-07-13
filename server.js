@@ -3,7 +3,7 @@ const lodash = require("lodash");
 const app = express();
 const quotes = require("./quotes.json");
 const cors = require("cors");
-const port = 45479;
+
 
 
 app.use(cors());
@@ -38,6 +38,11 @@ function pickFromArray(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-const listener = app.listen(process.env.PORT, function () {
-  console.log("Your app is listening on port " + listener.address().port);
+// const listener = app.listen(process.env.PORT, function () {
+//   console.log("Your app is listening on port " + listener.address().port);
+// });
+
+const PORT = 45479;
+app.listen(PORT, function(){
+  "Your app is listening on port 45479......"
 });
